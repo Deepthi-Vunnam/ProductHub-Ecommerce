@@ -68,8 +68,7 @@ export const Login = () => {
         if (!passwordP.test(formData.password)) {
 
             newErrors.password =
-                "Please Enter Valid Password"
-
+                "Password must be 8+ chars with A-Z, a-z, 0-9, symbol"
             isValid = false
         }
 

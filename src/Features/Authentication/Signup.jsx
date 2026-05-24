@@ -25,8 +25,7 @@ export const Signup = () => {
     // PATTERNS
 
     let usernameP =
-        /^[A-Z]{1}[a-z]{5,} [a-z]{5,}$/
-
+        /^[A-Z][a-z]+(?: [a-z]+)*$/
     let passwordP =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%^*]).{8,}$/
 
@@ -68,8 +67,7 @@ export const Signup = () => {
         if (!usernameP.test(formData.name)) {
 
             newErrors.name =
-                "Please Enter Valid Username"
-
+                "Name must start with capital letter (e.g. Deepthi vunnam)"
             isValid = false
         }
 
@@ -78,8 +76,7 @@ export const Signup = () => {
         if (!passwordP.test(formData.password)) {
 
             newErrors.password =
-                "Please Enter Valid Password"
-
+                "Password must be 8+ chars with A-Z, a-z, 0-9, symbol"
             isValid = false
         }
 
