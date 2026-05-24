@@ -25,7 +25,7 @@ export const Signup = () => {
     // PATTERNS
 
     let usernameP =
-        /^[A-Z]{1}[a-z]{5,} [A-Z]{1}[a-z]{5,}$/
+        /^[A-Z]{1}[a-z]{5,} [a-z]{5,}$/
 
     let passwordP =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%^*]).{8,}$/
